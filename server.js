@@ -9,7 +9,9 @@ import User from "./models/Users.js"
 const app= express()
 dotenv.config()
 app.use(cors({
-    origin:'https://abdelrahmanmansour321-art.github.io//https://abdelrahmanmansour321-art.github.io/freshman-platform2/'
+    origin:'https://abdelrahmanmansour321-art.github.io/freshman-platform2/',
+    methods:["POST","GET"],
+    credentials:true
 }))
 app.use(express.json())
 
