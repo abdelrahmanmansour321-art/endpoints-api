@@ -18,7 +18,7 @@ const MONGO_URI=process.env.MONGO_URI
 const APP_SECRET=process.env.APP_SECRET
 
 
-mongoose.connect(MONGO_URI)
+await mongoose.connect(MONGO_URI)
 .then(()=>{
     console.log("mongoDB connected sucssesfully")
 })
@@ -58,11 +58,11 @@ await transport.sendMail(mailOptions,(err,info)=>{
         console.log(`email sent to ${email}`)
     }
 
-    res.json({massage:"regiseter success"})
+    res.json({message:"regiseter success"})
 })
 
     }catch(err){
-        res.status(404).json({massage:"err loging in"})
+        res.status(500).json({message:"err loging in"})
 
     }
 })
