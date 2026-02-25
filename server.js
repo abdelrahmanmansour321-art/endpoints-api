@@ -9,7 +9,9 @@ import User from "./models/Users.js"
 const app= express()
 dotenv.config()
 app.use(cors({
-    origin:'https://abdelrahmanmansour321-art.github.io/freshman-platform2/',
+    
+    origin:['https://abdelrahmanmansour321-art.github.io/freshman-platform2/', 
+        'http://localhost:5176','https://endpoints-api-tawny.vercel.app/getData'],
     methods:["POST","GET"],
     credentials:true
 }))
